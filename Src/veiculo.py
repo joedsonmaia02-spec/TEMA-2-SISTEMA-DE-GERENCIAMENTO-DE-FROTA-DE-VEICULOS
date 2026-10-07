@@ -1,5 +1,5 @@
 class Veiculo:
-    def __init__(self, placa, marca, modelo, tipo, ano, km_rodados, consumo_medio, tipo_combustivel , status ):
+    def __init__(self, placa, marca, modelo, tipo, ano, km_rodados, consumo_medio, tipo_combustivel , tamanho_tanque_combustivel, status ):
         self.placa = placa
         self.marca = marca
         self.modelo = modelo
@@ -8,6 +8,7 @@ class Veiculo:
         self.km_rodados = km_rodados
         self.consumo_medio = consumo_medio
         self.tipo_combustivel = tipo_combustivel
+        self.tamanho_tanque_combustivel = tamanho_tanque_combustivel
         self.status = status
 
     @property
@@ -20,11 +21,12 @@ class Veiculo:
             raise Exception(f"{placa} não atende aos requisitos obrigatórios")
         else:
             self._placa = placa
+
     @property
     def marca(self):
         return self._marca
 
-    @placa.setter 
+    @marca.setter 
     def marca(self, marca):
         if len(marca) == 0:
             print(f"{marca} é uma marca inválida")
@@ -86,6 +88,17 @@ class Veiculo:
             self._tipo_combustivel = tipo_combustivel
         else:
             raise ValueError(f"{tipo_combustivel} não é um tipo de combustível")
+
+    @property
+    def tamanho_tanque_combustivel(self):
+        return self.tamanho_tanque_combustivel
+    
+    @tamanho_tanque_combustivel.setter 
+    def tamanho_tanque_combustivel(self, tamanho_tanque_combustivel):
+        if tamanho_tanque_combustivel <0 :
+            raise ValueError(f"{self.tamanho_tanque_combustivel} não é um tamanho válido do tanque de combustível")
+        else:
+            self.tamanho_tanque_combustivel = self.tamanho_tanque_combustivel
 
     @property
     def status(self):

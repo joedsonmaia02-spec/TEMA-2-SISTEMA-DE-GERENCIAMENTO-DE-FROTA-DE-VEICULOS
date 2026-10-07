@@ -1,8 +1,8 @@
 from veiculo import Veiculo
 
 class moto(Veiculo):
-    def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel, status, cilindradas):
-        super().__init__( placa, marca, modelo, "moto", ano, km_rodados, consumo_medio,tipo_combustivel, status)
+    def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status, cilindradas):
+        super().__init__( placa, marca, modelo, "moto", ano, km_rodados, consumo_medio,tipo_combustivel, tamanho_tanque_combustivel, status)
         self.cilindradas= cilindradas
 
     @property
