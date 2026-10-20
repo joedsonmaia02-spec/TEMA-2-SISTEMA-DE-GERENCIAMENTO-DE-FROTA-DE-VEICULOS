@@ -5,6 +5,18 @@ class caminhao(Veiculo):
         super().__init__( placa, marca, modelo, "caminhão", ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status)
         self.eixos = eixos
 
+    def __str__(self):
+        return super().__str__() + f"\n Eixos: {self.eixos}"
+
+    def to_dict(self):
+        d = super().to_dict()
+        d["eixos"] = self.eixos
+        return d
+
+    @classmethod
+    def from_dict(cls,d):
+        return cls(d["eixos"])
+
     @property
     def eixos(self):
         return self._eixos
@@ -16,6 +28,3 @@ class caminhao(Veiculo):
         else:
             raise ValueError(f"Tipo de eixo inexistente")
 
-
-c = caminhao("ABC1D23", "Volvo", "FH", 2015, 80000, 3.5, "Disponivel", "duplos")
-print(c.eixos, c.marca, c.consumo_medio, c.ano, c.modelo, c.km_rodados)    

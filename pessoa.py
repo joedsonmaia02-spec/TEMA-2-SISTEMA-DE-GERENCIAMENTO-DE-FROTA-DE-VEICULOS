@@ -4,6 +4,17 @@ class Pessoa:
         self.cpf = cpf
         self.idade = idade
 
+    def to_dict(self):
+        return{
+            "nome": self.nome,
+            "cpf": self.cpf,
+            "idade": self.idade,
+        }
+
+    @classmethod
+    def from_dict(cls,d):
+        return cls(d["nome"], d["cpf"], ["idade"])
+
     @property
     def nome(self):
         return self._nome
@@ -32,6 +43,7 @@ class Pessoa:
 
     @idade.setter
     def idade(self, idade):
+        idade = int(idade)
         if idade >= 18:
             self._idade = idade
         else:

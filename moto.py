@@ -5,6 +5,18 @@ class moto(Veiculo):
         super().__init__( placa, marca, modelo, "moto", ano, km_rodados, consumo_medio,tipo_combustivel, tamanho_tanque_combustivel, status)
         self.cilindradas= cilindradas
 
+    def __str__(self):
+        return super().__str__() + f"\nCilindradas: {self.cilindradas}"
+
+    def to_dict(self):
+         d = super().to_dict()  
+         d["cilindradas"] = self.cilindradas
+         return d
+
+    @classmethod
+    def from_dict(cls, d):
+        return cls(d["placa"],d["marca"],d["modelo"],d["ano"],d["km_rodados"],d["consumo_medio"],d["tipo_combustivel"],d["tamanho_tanque_combustivel"],d["status"],d["cilindradas"])
+
     @property
     def cilindradas(self):
             return self._cilindradas
@@ -15,7 +27,3 @@ class moto(Veiculo):
             raise ValueError(f"{cilindradas} não é uma quantidade válida de cilindradas")
         else:
             self._cilindradas = cilindradas
-
-c = moto("ABC1D23", "Fiat", "Uno", 2015, 80000, 12.5, "Disponivel", 500)
-
-print(c.cilindradas,c.marca,c.modelo)
