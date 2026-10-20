@@ -12,6 +12,35 @@ class Veiculo:
         self.status = status
         self.manutencoes = []
 
+    def __str__(self):
+        return (
+                f"Placa: {self.placa}\n"
+                f"Marca: {self.marca}\n"
+                f"Modelo: {self.modelo}\n"
+                f"Ano: {self.ano}\n"
+                f"KM rodados: {self.km_rodados}\n"
+                f"Status: {self.status}"
+        )
+
+    def to_dict(self):
+        return {
+            "placa": self.placa,
+            "marca": self.marca,
+            "modelo": self.modelo,
+            "tipo": self.tipo,
+            "ano": self.ano,
+            "km_rodados": self.km_rodados,
+            "consumo_medio": self.consumo_medio,
+            "tipo_combustivel": self.tipo_combustivel,
+            "tamanho_tanque_combustivel": self.tamanho_tanque_combustivel,
+            "status": self._status,
+        }
+
+    @classmethod
+    def from_dict(cls,d):
+        return cls(d["placa"],d["marca"],d["modelo"],d["tipo"],d["ano"],d["km_rodados"],d["tipo_combustivel"],d["tamanho_tanque_combustivel"],d["status"])
+
+
     @property
     def placa(self):
         return self._placa
@@ -51,6 +80,7 @@ class Veiculo:
 
     @ano.setter
     def ano(self, ano):
+        ano =int(ano)
         if ano < 1930 or ano > 2026:
             raise ValueError(f"{ano} é um ano inválido" )
         self._ano = ano
