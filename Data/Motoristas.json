@@ -1,0 +1,42 @@
+{
+    "632.434.654-74": {
+        "nome": "João",
+        "cpf": "632.434.654-74",
+        "idade": 56,
+        "numero_cnh": "11111111111",
+        "tipo_cnh": "AB",
+        "ocupado": false
+    },
+    "10000000001": {
+        "nome": "Ana Souza",
+        "cpf": "10000000001",
+        "idade": 30,
+        "numero_cnh": "10000000001",
+        "tipo_cnh": "AC",
+        "ocupado": true
+    },
+    "10000000002": {
+        "nome": "Bia Lima",
+        "cpf": "10000000002",
+        "idade": 28,
+        "numero_cnh": "10000000002",
+        "tipo_cnh": "B",
+        "ocupado": false
+    },
+    "10000000003": {
+        "nome": "Carol Dias",
+        "cpf": "10000000003",
+        "idade": 35,
+        "numero_cnh": "10000000003",
+        "tipo_cnh": "A",
+        "ocupado": false
+    },
+    "10000000004": {
+        "nome": "Davi Rocha",
+        "cpf": "10000000004",
+        "idade": 41,
+        "numero_cnh": "10000000004",
+        "tipo_cnh": "C",
+        "ocupado": false
+    }
+}

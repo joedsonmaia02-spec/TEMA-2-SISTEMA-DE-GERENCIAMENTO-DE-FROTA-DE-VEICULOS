@@ -1,0 +1,93 @@
+{
+    "ABC1D23": {
+        "placa": "ABC1D23",
+        "marca": "Honda",
+        "modelo": "CG 160",
+        "tipo": "MOTO",
+        "ano": 2020,
+        "km_rodados": 15000,
+        "consumo_medio": 40,
+        "tipo_combustivel": "GASOLINA",
+        "tamanho_tanque_combustivel": 14,
+        "status": "Disponivel",
+        "cilindradas": 160
+    },
+    "AAAXXXX": {
+        "placa": "AAAXXXX",
+        "marca": "MERCEDES",
+        "modelo": "QUEM SABE",
+        "tipo": "CAMINHAO",
+        "ano": 1992,
+        "km_rodados": 50000,
+        "consumo_medio": 50,
+        "tipo_combustivel": "DIESEL",
+        "tamanho_tanque_combustivel": 16,
+        "status": "Disponivel",
+        "eixos": "SIMPLES"
+    },
+    "AAABBBB": {
+        "placa": "AAABBBB",
+        "marca": "toyota",
+        "modelo": "hilux",
+        "tipo": "CARRO",
+        "ano": 2014,
+        "km_rodados": 30000,
+        "consumo_medio": 25,
+        "tipo_combustivel": "DIESEL",
+        "tamanho_tanque_combustivel": 12,
+        "status": "Disponivel",
+        "qnt_portas": 4
+    },
+    "CAM1A23": {
+        "placa": "CAM1A23",
+        "marca": "Volvo",
+        "modelo": "FH",
+        "tipo": "CAMINHAO",
+        "ano": 2020,
+        "km_rodados": 1000,
+        "consumo_medio": 3.5,
+        "tipo_combustivel": "DIESEL",
+        "tamanho_tanque_combustivel": 500,
+        "status": "Viagem em curso",
+        "eixos": "DUPLOS"
+    },
+    "CAR1B34": {
+        "placa": "CAR1B34",
+        "marca": "Fiat",
+        "modelo": "Argo",
+        "tipo": "CARRO",
+        "ano": 2022,
+        "km_rodados": 20500,
+        "consumo_medio": 12.0,
+        "tipo_combustivel": "GASOLINA",
+        "tamanho_tanque_combustivel": 48,
+        "status": "Disponivel",
+        "qnt_portas": 4
+    },
+    "CAR2C45": {
+        "placa": "CAR2C45",
+        "marca": "VW",
+        "modelo": "Polo",
+        "tipo": "CARRO",
+        "ano": 2021,
+        "km_rodados": 35000,
+        "consumo_medio": 11.0,
+        "tipo_combustivel": "ETANOL",
+        "tamanho_tanque_combustivel": 52,
+        "status": "Disponivel",
+        "qnt_portas": 4
+    },
+    "MOT1D56": {
+        "placa": "MOT1D56",
+        "marca": "Honda",
+        "modelo": "CG 160",
+        "tipo": "MOTO",
+        "ano": 2023,
+        "km_rodados": 5000,
+        "consumo_medio": 35.0,
+        "tipo_combustivel": "GASOLINA",
+        "tamanho_tanque_combustivel": 14,
+        "status": "Disponivel",
+        "cilindradas": 160
+    }
+}

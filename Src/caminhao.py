@@ -1,9 +1,24 @@
 from veiculo import Veiculo
 
 class caminhao(Veiculo):
-    def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel, status, eixos):
-        super().__init__( placa, marca, modelo, "caminhão", ano, km_rodados, consumo_medio, tipo_combustivel , status)
+    def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel,tamanho_tanque_combustivel , status, eixos):
+        super().__init__( placa, marca, modelo, "CAMINHAO", ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status)
         self.eixos = eixos
+
+    categoria_exigida = "C"
+
+    def __str__(self):
+        return super().__str__() + f"\n Eixos: {self.eixos}"
+
+    def to_dict(self):
+        d = super().to_dict()
+        d["eixos"] = self.eixos
+        return d
+
+    @classmethod
+    def from_dict(cls,d):
+        return cls(d["placa"], d["marca"], d["modelo"], d["ano"], d["km_rodados"],d["consumo_medio"], d["tipo_combustivel"],
+                   d["tamanho_tanque_combustivel"], d["status"], d["eixos"])
 
     @property
     def eixos(self):
@@ -11,11 +26,9 @@ class caminhao(Veiculo):
 
     @eixos.setter
     def eixos(self, eixos):
-        if eixos in("simples","duplos", "triplos"):
+        eixos = eixos.strip().upper()
+        if eixos in("SIMPLES","DUPLOS", "TRIPLOS"):
             self._eixos = eixos
         else:
             raise ValueError(f"Tipo de eixo inexistente")
 
-
-c = caminhao("ABC1D23", "Volvo", "FH", 2015, 80000, 3.5, "Disponivel", "duplos")
-print(c.eixos, c.marca, c.consumo_medio, c.ano, c.modelo, c.km_rodados)    

@@ -4,35 +4,47 @@ class Pessoa:
         self.cpf = cpf
         self.idade = idade
 
+    def to_dict(self):
+        return{
+            "nome": self.nome,
+            "cpf": self.cpf,
+            "idade": self.idade,
+        }
+
+    @classmethod
+    def from_dict(cls,d):
+        return cls(d["nome"], d["cpf"], ["idade"])
+
     @property
     def nome(self):
-        return self.nome
+        return self._nome
 
     @nome.setter
     def nome(self, nome):
         if len(nome) > 0:
-            self.nome = nome
+            self._nome = nome
         else:
             raise ValueError(f"{nome} é um nome inválido")
 
     @property
     def cpf(self):
-        return self.cpf
+        return self._cpf
 
     @cpf.setter
     def cpf(self, cpf):
         if len(cpf) >= 11 and len(cpf) <= 14:
-            self.cpf= cpf
+            self._cpf= cpf
         else:
             raise ValueError(f"{cpf} não é um CPF válido")
 
     @property
     def idade(self):
-        return self.idade
+        return self._idade
 
     @idade.setter
     def idade(self, idade):
-        if idade >= "18":
-            self.idade = idade
+        idade = int(idade)
+        if idade >= 18:
+            self._idade = idade
         else:
             raise ValueError(f"{idade} é uma Idade é inválida ")
