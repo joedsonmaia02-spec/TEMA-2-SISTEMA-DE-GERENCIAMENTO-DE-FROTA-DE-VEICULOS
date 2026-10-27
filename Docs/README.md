@@ -34,10 +34,9 @@ frota/
 │   ├── veiculos.json
 │   └── motoristas.json
 │
-├── repositories/
-│   ├── __init__.py
-│   ├── base.py
-│   └── json_repository.py
+├── testes/
+|   └── teste.py│   
+│   
 │
 ├── services/
 │   └── relatorios.json
