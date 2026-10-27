@@ -2,7 +2,11 @@ from veiculo import Veiculo
 
 class moto(Veiculo):
     def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status, cilindradas):
+<<<<<<< HEAD
         super().__init__( placa, marca, modelo, "MOTO", ano, km_rodados, consumo_medio,tipo_combustivel, tamanho_tanque_combustivel, status)
+=======
+        super().__init__( placa, marca, modelo, "moto", ano, km_rodados, consumo_medio,tipo_combustivel, tamanho_tanque_combustivel, status)
+>>>>>>> 9e7b941e00328633fa8441e9ccddf70b4a696d17
         self.cilindradas= cilindradas
         
     categoria_exigida = "A"

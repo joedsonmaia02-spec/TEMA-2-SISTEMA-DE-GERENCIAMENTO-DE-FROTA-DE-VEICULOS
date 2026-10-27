@@ -7,6 +7,7 @@ class Motorista(Pessoa):
         self.tipo_cnh = tipo_cnh
         self._ocupado = False
 
+<<<<<<< HEAD
 
     def to_dict(self):
         d = super().to_dict()
@@ -76,3 +77,25 @@ class Motorista(Pessoa):
 
     def liberar(self):
         self._ocupado = False
+=======
+    @property 
+    def numero_cnh(self):
+        return self.numero_cnh
+
+    @numero_cnh.setter
+    def numero_cnh(self, numero_cnh):
+        if len(numero_cnh) < 11 or len(numero_cnh) > 11:
+            raise ValueError(f"{numero_cnh} número de registro da CNH inválido")
+        else:
+            self.numero_cnh = numero_cnh
+
+    @property
+    def tipo_cnh(self):
+        return self.tipo_cnh
+
+    @tipo_cnh.setter 
+    def tipo_cnh(self, tipo_cnh):
+        if tipo_cnh not in("A","B","C","AB","AC","AD","AE"):
+            raise ValueError(f"{tipo_cnh} não é um tipo de CNH")
+    
+>>>>>>> 9e7b941e00328633fa8441e9ccddf70b4a696d17

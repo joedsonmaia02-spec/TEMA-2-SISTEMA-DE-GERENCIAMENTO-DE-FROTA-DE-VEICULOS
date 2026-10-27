@@ -3,7 +3,11 @@ from veiculo import Veiculo
 
 class carro(Veiculo):
     def __init__(self, placa, marca, modelo, ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status, qnt_portas):
+<<<<<<< HEAD
         super().__init__( placa, marca, modelo, "CARRO", ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status)
+=======
+        super().__init__( placa, marca, modelo, "carro", ano, km_rodados, consumo_medio, tipo_combustivel, tamanho_tanque_combustivel, status)
+>>>>>>> 9e7b941e00328633fa8441e9ccddf70b4a696d17
         self.qnt_portas = qnt_portas
     categoria_exigida = "B"
     

@@ -14,11 +14,9 @@ O sistema tem como objetivo ser uma ferramenta de controle para gerenciar frotas
 ```
 
 frota/
-├── __init__.py
-├── enums.py
-├── exceptions.py
+├── main.py
 │
-├── models/
+├── src/
 │   ├── __init__.py
 │   ├── pessoa.py
 │   ├── motorista.py
@@ -28,26 +26,24 @@ frota/
 │   ├── caminhao.py
 │   ├── viagem.py
 │   ├── manutencao.py
+|   ├── relatorios.py
 │   └── abastecimento.py
+|
 │
-├── strategies/
-│   ├── __init__.py
-│   └── custo_manutencao.py
+├── data/
+│   ├── veiculos.json
+│   └── motoristas.json
 │
-├── repositories/
-│   ├── __init__.py
-│   ├── base.py
-│   └── json_repository.py
+├── testes/
+|   └── teste.py│   
+│   
 │
 ├── services/
-│   ├── __init__.py
-│   └── relatorios.py
+│   └── relatorios.json
 │
-├── config/
-│   ├── __init__.py
-│   └── politicas.py
-│
-└── cli.py
+├── docs/
+├── .gitignore
+└── readme
 
 
 settings.json
