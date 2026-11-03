@@ -1,0 +1,30 @@
+{
+    "ABC1D53": {
+        "placa": "ABC1D53",
+        "marca": "BYD",
+        "modelo": "Uno",
+        "tipo": "CARRO",
+        "ano": 2015,
+        "km_rodados": 30480,
+        "consumo_medio": 12.0,
+        "tipo_combustivel": "GASOLINA",
+        "tamanho_tanque_combustivel": 50,
+        "status": "Disponivel",
+        "km_ultima_revisao": 29000,
+        "qnt_portas": 4
+    },
+    "XYZ9K88": {
+        "placa": "XYZ9K88",
+        "marca": "VW",
+        "modelo": "Gol",
+        "tipo": "CARRO",
+        "ano": 2018,
+        "km_rodados": 80300,
+        "consumo_medio": 6.0,
+        "tipo_combustivel": "ETANOL",
+        "tamanho_tanque_combustivel": 60,
+        "status": "Disponivel",
+        "km_ultima_revisao": 79000,
+        "qnt_portas": 4
+    }
+}

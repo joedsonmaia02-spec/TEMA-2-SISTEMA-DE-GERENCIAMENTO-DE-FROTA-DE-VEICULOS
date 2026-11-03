@@ -1,0 +1,34 @@
+{
+    "11111111111": {
+        "nome": "Ana",
+        "cpf": "11111111111",
+        "idade": 30,
+        "numero_cnh": "12345678901",
+        "tipo_cnh": "B",
+        "ocupado": false
+    },
+    "22222222222": {
+        "nome": "Carlos",
+        "cpf": "22222222222",
+        "idade": 40,
+        "numero_cnh": "10987654321",
+        "tipo_cnh": "C",
+        "ocupado": false
+    },
+    "33333333333": {
+        "nome": "Adriano",
+        "cpf": "33333333333",
+        "idade": 45,
+        "numero_cnh": "67765656741",
+        "tipo_cnh": "AD",
+        "ocupado": false
+    },
+    "444444444444": {
+        "nome": "Franscisco",
+        "cpf": "444444444444",
+        "idade": 45,
+        "numero_cnh": "67765656747",
+        "tipo_cnh": "AD",
+        "ocupado": false
+    }
+}
