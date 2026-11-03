@@ -32,25 +32,24 @@ classDiagram
     class Caminhao {
         -capacidade_carga: float
         +calcular_consumo() float
-        +esta_sobrecarregado(carga_atual) bool
     }
 
     class Pessoa {
         -nome: str
         -cpf: str
+        - idade: str
     }
 
     class Motorista {
         -categoria_cnh: CategoriaCNH
-        -experiencia_anos: int
         -disponivel: bool
-        -historico_viagens: List~Viagem~
-        +pode_dirigir(veiculo) bool
+        +ocupado: bool
     }
 
     class Viagem {
         -motorista: Motorista
         -veiculo: Veiculo
+        -associar_motorista_veiculo
         -origem: str
         -destino: str
         -distancia: float
@@ -74,43 +73,17 @@ classDiagram
         -data: date
         -tipo_combustivel: TipoCombustivel
         -litros: float
-        -valor_pago: float
-    }
-
-    class EstrategiaCustoManutencao {
-        <<interface>>
-        +calcular(descricao) float
-    }
-
-    class CustoLeve
-    class CustoPesado
-
-    class RepositorioBase {
-        +salvar(entidade) void
-        +buscar(id) object
-        +listar() list
-        +remover(id) void
+        -valor_litro: float
     }
 
     class JsonRepository
-    class SqliteRepository
-
-    class StatusVeiculo {
-        ATIVO
-        MANUTENCAO
-        INATIVO
-    }
 
     Veiculo <|-- Carro
     Veiculo <|-- Moto
     Veiculo <|-- Caminhao
     Pessoa <|-- Motorista
 
-    EstrategiaCustoManutencao <|.. CustoLeve
-    EstrategiaCustoManutencao <|.. CustoPesado
-
     RepositorioBase <|.. JsonRepository
-    RepositorioBase <|.. SqliteRepository
 
     Viagem --> Motorista : motorista designado
     Viagem --> Veiculo : veiculo designado
